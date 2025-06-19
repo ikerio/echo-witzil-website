@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/echo-witzil-website/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Echo+Witzil - The Future of Digital Interaction</title>
+    <meta
+      name="description"
+      content="Transform digital marketing through AI-powered NPCs, immersive virtual worlds, and real-world social impact with Echo+Witzil."
+    />
+
+    <!-- Preload important fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Optimize for mobile -->
+    <meta name="theme-color" content="#6366f1" />
+
+    <!-- Social Media Meta Tags -->
+    <meta
+      property="og:title"
+      content="Echo+Witzil - The Future of Digital Interaction"
+    />
+    <meta
+      property="og:description"
+      content="Transform digital marketing through AI-powered NPCs, immersive virtual worlds, and real-world social impact."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://echowitzil.com" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Echo+Witzil - The Future of Digital Interaction"
+    />
+    <meta
+      name="twitter:description"
+      content="Transform digital marketing through AI-powered NPCs, immersive virtual worlds, and real-world social impact."
+    />
+
+    <style>
+      /* Loading screen styles */
+      #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          #0f172a 0%,
+          #7c3aed 50%,
+          #0f172a 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+
+      .loader {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+        border-top: 3px solid #6366f1;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Hide scrollbar during loading */
+      body.loading {
+        overflow: hidden;
+      }
+
+      /* Font optimization */
+      * {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+      }
+    </style>
+    <script type="module" crossorigin src="/echo-witzil-website/assets/index-KFOe3JMq.js"></script>
+    <link rel="stylesheet" crossorigin href="/echo-witzil-website/assets/index-CdfSy4Rz.css">
+  </head>
+  <body class="loading">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Main App -->
+    <div id="root"></div>
+
+    <script>
+      // Remove loading screen once app is ready
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const loadingScreen = document.getElementById("loading-screen");
+          const body = document.body;
+
+          if (loadingScreen) {
+            loadingScreen.style.opacity = "0";
+            setTimeout(() => {
+              loadingScreen.style.display = "none";
+              body.classList.remove("loading");
+            }, 500);
+          }
+        }, 1000); // Give time for critical resources to load
+      });
+    </script>
+
+  </body>
+</html>
